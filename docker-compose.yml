@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  frontend:
+    build: ./front_end
+    image: front
+    container_name: tiny-app-frontend
+    ports:
+      - "8080:8080"
+      - "80:80"
+  backend:
+    build: ./back_end
+    image: back
+    container_name: tiny-app-backend
+    expose:
+      - "5000"

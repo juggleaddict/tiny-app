@@ -1,7 +1,5 @@
-FROM python:latest
-RUN apt-get update
-RUN apt-get -y upgrade
-RUN apt-get install -y python3 python3-pip 
+FROM python:3-alpine
+EXPOSE 5000
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
